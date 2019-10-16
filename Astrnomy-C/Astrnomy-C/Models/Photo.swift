@@ -14,7 +14,7 @@ class Photo: NSObject {
     var camera: Camera?
     var earthDate: Date?
     
-    var imageURL: URL?
+    @objc var imageURL: NSURL?
 
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -36,7 +36,7 @@ class Photo: NSObject {
 			self.earthDate = date
 		}
 		if let urlString = dictionary["imageSrc"] as? String, let url = URL(string: urlString) {
-			self.imageURL = url
+			self.imageURL = url as NSURL
 		}
 	}
 }

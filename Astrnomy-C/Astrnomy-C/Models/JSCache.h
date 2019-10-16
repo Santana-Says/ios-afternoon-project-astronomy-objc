@@ -10,9 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JSCache : NSObject
+NS_SWIFT_NAME(Cache)
+@interface JSCache<Key, Value>: NSObject
 
-//- (void)cacheValue:(NSValue)value for:(NSKeyedArchiver)key;
+- (void)cacheValue:(Value)value for:(Key)key;
+- (Value)valueForKey:(Key)key;
 
 @end
 

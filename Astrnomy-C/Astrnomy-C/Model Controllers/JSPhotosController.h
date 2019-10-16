@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSURL *)urlForManifestFromRover:(NSString *)roverName;
 - (NSURL *)urlForPhotosFromRover:(NSString *)roverName onSol:(NSNumber *)sol;
 - (void)fetchManifestFromRover:(NSString *)roverName withCompletion:(myCompletion _Nullable)block;
-- (void)fetchPhotosFromRover:(NSString *)roverName onSol:(NSNumber *)sol withCompletion:(myCompletion _Nullable)block;
+- (void)fetchPhotosFromRover:(JSRover *)rover onSol:(NSNumber *)sol withCompletion:(myCompletion _Nullable)block;
 
 NS_ASSUME_NONNULL_END
 

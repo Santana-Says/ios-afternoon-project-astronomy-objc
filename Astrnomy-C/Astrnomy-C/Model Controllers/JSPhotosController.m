@@ -43,10 +43,10 @@
 	return urlcomponents.URL;
 }
 
-- (NSURL *)urlForPhotosFromRover:(NSString *)roverName onSol:(NSNumber *)sol {
+- (NSURL *)urlForPhotosFromRover:(JSRover *)rover onSol:(NSNumber *)sol {
 	NSURL *url = self.baseURL;
 	url = [url URLByAppendingPathComponent:@"rovers"];
-	url = [url URLByAppendingPathComponent:roverName];
+	url = [url URLByAppendingPathComponent:rover.name];
 	url = [url URLByAppendingPathComponent:@"photos"];
 	
 	NSURLComponents *urlcomponents = [[NSURLComponents alloc] initWithURL:url resolvingAgainstBaseURL:true];
@@ -84,7 +84,7 @@
 		
 		JSRover *rover = [[JSRover alloc] initWithDictionary:json];
 
-		self.photos = [rover.soldescriptions copy];
+		self.photos = [rover.solDescriptions copy];
 		block(@[rover]);
 	}];
 	[task resume];

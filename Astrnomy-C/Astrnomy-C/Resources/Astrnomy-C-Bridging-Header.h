@@ -7,3 +7,7 @@
 #import "JSSolDescription.h"
 #import "JSCamera.h"
 #import "JSCache.h"
+#import "JSConcurrentOperation.h"
+#import "JSFetchOperation.h"
+#import "NSURL+URL_Secure.h"
+#import "JSNasaApi.h"

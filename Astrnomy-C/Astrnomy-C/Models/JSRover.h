@@ -10,6 +10,7 @@
 
 @class JSSolDescription;
 
+NS_SWIFT_NAME(Rover)
 @interface JSRover : NSObject
 
 typedef NS_ENUM(NSInteger, Status) {
@@ -24,7 +25,7 @@ typedef NS_ENUM(NSInteger, Status) {
 @property int maxSol;
 @property NSDate *maxDate;
 @property int numberOfPhotos;
-@property NSArray<JSSolDescription *> *soldescriptions;
+@property NSArray<JSSolDescription *> *solDescriptions;
 
 - (instancetype)initWithDictionary:(NSDictionary *)roverDict;
 

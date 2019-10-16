@@ -13,6 +13,9 @@
 		B5C9A37923553EF6009AFA06 /* JSSolDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C9A37823553EF6009AFA06 /* JSSolDescription.m */; };
 		B5C9A37C23553FCF009AFA06 /* JSCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C9A37B23553FCF009AFA06 /* JSCamera.m */; };
 		B5C9A37F235540B3009AFA06 /* JSCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C9A37E235540B3009AFA06 /* JSCache.m */; };
+		B5C9A385235667DC009AFA06 /* JSConcurrentOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C9A384235667DC009AFA06 /* JSConcurrentOperation.m */; };
+		B5C9A38823569047009AFA06 /* JSFetchOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C9A38723569047009AFA06 /* JSFetchOperation.m */; };
+		B5C9A38B2356D7B1009AFA06 /* NSURL+URL_Secure.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C9A38A2356D7B0009AFA06 /* NSURL+URL_Secure.m */; };
 		B5F347DD2354FFB500FCD842 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F347DC2354FFB500FCD842 /* AppDelegate.m */; };
 		B5F347E02354FFB500FCD842 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F347DF2354FFB500FCD842 /* SceneDelegate.m */; };
 		B5F347E62354FFB600FCD842 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5F347E42354FFB600FCD842 /* Main.storyboard */; };
@@ -37,6 +40,12 @@
 		B5C9A37B23553FCF009AFA06 /* JSCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSCamera.m; sourceTree = "<group>"; };
 		B5C9A37D235540B3009AFA06 /* JSCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSCache.h; sourceTree = "<group>"; };
 		B5C9A37E235540B3009AFA06 /* JSCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSCache.m; sourceTree = "<group>"; };
+		B5C9A383235667DC009AFA06 /* JSConcurrentOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSConcurrentOperation.h; sourceTree = "<group>"; };
+		B5C9A384235667DC009AFA06 /* JSConcurrentOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSConcurrentOperation.m; sourceTree = "<group>"; };
+		B5C9A38623569047009AFA06 /* JSFetchOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSFetchOperation.h; sourceTree = "<group>"; };
+		B5C9A38723569047009AFA06 /* JSFetchOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSFetchOperation.m; sourceTree = "<group>"; };
+		B5C9A3892356D7B0009AFA06 /* NSURL+URL_Secure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+URL_Secure.h"; sourceTree = "<group>"; };
+		B5C9A38A2356D7B0009AFA06 /* NSURL+URL_Secure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+URL_Secure.m"; sourceTree = "<group>"; };
 		B5F347D82354FFB500FCD842 /* Astrnomy-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Astrnomy-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5F347DB2354FFB500FCD842 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B5F347DC2354FFB500FCD842 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -86,7 +95,7 @@
 				B5F347FB2355004A00FCD842 /* Helpers */,
 				B5F347F52355004900FCD842 /* Model Controllers */,
 				B5F347F72355004900FCD842 /* Models */,
-				B5F347F92355004900FCD842 /* Networking */,
+				B5F347F92355004900FCD842 /* Operations */,
 				B5F347F62355004900FCD842 /* Resources */,
 				B5F347F42355004900FCD842 /* Storyboards */,
 				B5F347FA2355004A00FCD842 /* View Controllers */,
@@ -154,11 +163,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		B5F347F92355004900FCD842 /* Networking */ = {
+		B5F347F92355004900FCD842 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
+				B5C9A383235667DC009AFA06 /* JSConcurrentOperation.h */,
+				B5C9A384235667DC009AFA06 /* JSConcurrentOperation.m */,
+				B5C9A38623569047009AFA06 /* JSFetchOperation.h */,
+				B5C9A38723569047009AFA06 /* JSFetchOperation.m */,
 			);
-			path = Networking;
+			path = Operations;
 			sourceTree = "<group>";
 		};
 		B5F347FA2355004A00FCD842 /* View Controllers */ = {
@@ -172,6 +185,8 @@
 		B5F347FB2355004A00FCD842 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				B5C9A3892356D7B0009AFA06 /* NSURL+URL_Secure.h */,
+				B5C9A38A2356D7B0009AFA06 /* NSURL+URL_Secure.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -202,6 +217,7 @@
 		B5F347D02354FFB500FCD842 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JS;
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = Lambda;
 				TargetAttributes = {
@@ -251,6 +267,8 @@
 				B5C9A373235507D1009AFA06 /* JSNasaApi.m in Sources */,
 				B5F347DD2354FFB500FCD842 /* AppDelegate.m in Sources */,
 				B5F347FE235501B300FCD842 /* PhotosCollectionVC.swift in Sources */,
+				B5C9A38823569047009AFA06 /* JSFetchOperation.m in Sources */,
+				B5C9A38B2356D7B1009AFA06 /* NSURL+URL_Secure.m in Sources */,
 				B5C9A36E23550699009AFA06 /* JSPhotosController.m in Sources */,
 				B5F347EE2354FFB800FCD842 /* main.m in Sources */,
 				B5C9A37F235540B3009AFA06 /* JSCache.m in Sources */,
@@ -258,6 +276,7 @@
 				B5F347E02354FFB500FCD842 /* SceneDelegate.m in Sources */,
 				B5C9A37923553EF6009AFA06 /* JSSolDescription.m in Sources */,
 				B5F348022355030F00FCD842 /* PhotoCell.swift in Sources */,
+				B5C9A385235667DC009AFA06 /* JSConcurrentOperation.m in Sources */,
 				B5F34800235501F400FCD842 /* Photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

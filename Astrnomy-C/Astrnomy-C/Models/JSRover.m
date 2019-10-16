@@ -40,7 +40,7 @@
 		for (NSDictionary *photoDict in rawPhotos) {
 			[photos addObject:[[JSSolDescription alloc] initWithDictionary:photoDict]];
 		}
-		_soldescriptions = photos;
+		_solDescriptions = photos;
 	}
 	return self;
 }

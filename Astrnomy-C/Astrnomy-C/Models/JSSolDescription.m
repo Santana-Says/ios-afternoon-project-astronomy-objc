@@ -7,7 +7,6 @@
 //
 
 #import "JSSolDescription.h"
-#import "JSCamera.h"
 
 @implementation JSSolDescription
 

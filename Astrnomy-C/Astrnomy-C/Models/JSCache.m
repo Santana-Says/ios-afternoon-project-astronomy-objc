@@ -17,4 +17,24 @@
 
 @implementation JSCache
 
+- (instancetype)init
+{
+	self = [super init];
+	if (self) {
+		_queue = dispatch_queue_create(@"MyCacheQueue", nil);
+		_cachedItems = [[NSDictionary alloc] init];
+	}
+	return self;
+}
+
+- (void)cacheValue:(id)value for:(id)key {
+	dispatch_async(self.queue, ^{
+		[self.cachedItems setValue:value forKey:key];
+	});
+}
+
+- (id)valueForKey:(id)key {
+	return self.cachedItems[key];
+}
+
 @end
